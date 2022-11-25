@@ -27,8 +27,8 @@ jobs:
 
       - name: Setup RubyGems credentials
         run: |
-          apt update
-          apt install libpq-dev
+          sudo apt update
+          sudo apt install libpq-dev
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
