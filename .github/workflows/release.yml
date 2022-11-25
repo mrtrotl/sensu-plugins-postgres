@@ -40,12 +40,12 @@ jobs:
 
       - run: bundle exec rake quick
 
-      - run: gem build sensu-plugins-postgres-mrtrotl.gemspec
+      - run: gem build sensu-plugins-postgres.gemspec
 
-      - run: gem install sensu-plugins-postgres-mrtrotl*.gem
+      - run: gem install sensu-plugins-postgres-*.gem
 
       - name: Publish to RubyGems
-        run: gem push sensu-plugins-postgres-mrtrotl-*.gem
+        run: gem push sensu-plugins-postgres-*.gem
 
       - name: Get the version
         id: get_version
