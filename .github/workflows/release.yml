@@ -36,6 +36,8 @@ jobs:
         env:
           RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
 
+      - run: bundle install
+
       - run: bundle exec rake quick
 
       - run: gem build sensu-plugins-postgres.gemspec
